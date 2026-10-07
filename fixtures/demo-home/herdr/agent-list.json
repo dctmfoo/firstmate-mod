@@ -1,0 +1,38 @@
+{
+  "id": "cli:agent:list",
+  "result": {
+    "type": "agent_list",
+    "agents": [
+      {
+        "agent": "claude",
+        "agent_status": "done",
+        "pane_id": "w44:p3C",
+        "tab_id": "w44:t3B"
+      },
+      {
+        "agent": "claude",
+        "agent_status": "done",
+        "pane_id": "w44:p3E",
+        "tab_id": "w44:t3D"
+      },
+      {
+        "agent": "claude",
+        "agent_status": "done",
+        "pane_id": "w44:p3G",
+        "tab_id": "w44:t3F"
+      },
+      {
+        "agent": "claude",
+        "agent_status": "done",
+        "pane_id": "w44:p3J",
+        "tab_id": "w44:t3H"
+      },
+      {
+        "agent": "claude",
+        "agent_status": "working",
+        "pane_id": "w44:p3P",
+        "tab_id": "w44:t3N"
+      }
+    ]
+  }
+}

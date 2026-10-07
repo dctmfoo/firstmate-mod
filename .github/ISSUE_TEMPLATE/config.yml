@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security problem
+    url: https://github.com/dctmfoo/firstmate-mod/security/advisories/new
+    about: Report vulnerabilities privately, not as an issue.
+  - name: Firstmate itself
+    url: https://github.com/kunchenguid/firstmate/issues
+    about: Problems with Firstmate (not this plugin) belong upstream.

@@ -1,0 +1,9 @@
+working [at=1791134412]: read the brief and the acceptance card; starting the staging install
+working [at=1791134601]: installed the latest build on staging; checking readiness
+needs-decision [at=1791134708] [key=staging-config]: staging readiness fails on one stale config value. Options: (A) I update it after a backup; (B) someone else does. Reply A or B.
+resolved [key=staging-config] [at=1791134761]: answered: A
+blocked [at=1791134970] [key=search-index]: config repaired, but the search index on staging is out of date. Needs an index rebuild; I won't touch shared staging data.
+resolved [key=search-index] [at=1791135120]: answered: agreed; an index fix is under way. Wait until told.
+paused [at=1791135125]: idle until the index fix has merged; then reinstall and walk the search page
+working [at=1791137158]: index fix merged; reinstalling
+paused [at=1791137956]: staging restored to the previous build. Idle until the release line lands; then reinstall and walk the search page.

@@ -1,0 +1,5 @@
+- [ ] harbor-backport-14-f2 - Harbor API: the 1.4 release branch is behind main; backport the cache fix and tag 1.4.1 (repo: harbor-api) (kind: ship) (since 2026-10-04)
+- [ ] lighthouse-offline-map-b1 - Lighthouse: add the offline map (saved forecasts, sync on reconnect) (repo: lighthouse) (kind: ship) (since 2026-10-05)
+- [ ] atlas-search-walk-w1 - Atlas Docs: walk the redesigned search page on staging (acceptance row 4) (repo: atlas-docs) (kind: scout) (since 2026-10-04)
+- [ ] tidepool-upload-retry-c1 - Tidepool: a failed upload is retried, never dropped (items 1-9) (repo: tidepool) (kind: ship) (since 2026-10-04)
+- [ ] lighthouse-sdk-pin-f1 - Lighthouse: the release build pins an old map SDK path, so an SDK update breaks every build (repo: lighthouse) (kind: ship) (since 2026-10-04)

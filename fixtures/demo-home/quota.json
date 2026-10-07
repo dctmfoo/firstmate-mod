@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-10-04T18:57:01.987Z",
+  "schemaVersion": 5,
+  "providers": [
+    {
+      "provider": "claude",
+      "plan": "max",
+      "state": {
+        "status": "fresh",
+        "stale": false
+      },
+      "windows": [
+        {
+          "id": "five_hour",
+          "label": "session",
+          "kind": "session",
+          "resetsAt": "2026-10-04T21:10:00.000Z",
+          "percentRemaining": 85
+        },
+        {
+          "id": "seven_day",
+          "label": "week",
+          "kind": "weekly",
+          "resetsAt": "2026-10-08T03:00:00.000Z",
+          "percentRemaining": 62
+        }
+      ],
+      "quotaSemantics": {
+        "status": "known",
+        "effectiveAvailability": [
+          {
+            "scope": "all_models",
+            "status": "known",
+            "effectivePercentRemaining": 62,
+            "limitingWindowIds": [
+              "seven_day"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": "codex",
+      "plan": "pro",
+      "state": {
+        "status": "fresh",
+        "stale": false
+      },
+      "windows": [
+        {
+          "id": "weekly",
+          "label": "week",
+          "kind": "weekly",
+          "resetsAt": "2026-10-09T21:20:14.000Z",
+          "percentRemaining": 84
+        }
+      ],
+      "quotaSemantics": {
+        "status": "known",
+        "effectiveAvailability": [
+          {
+            "scope": "all_models",
+            "status": "known",
+            "effectivePercentRemaining": 84,
+            "limitingWindowIds": [
+              "weekly"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

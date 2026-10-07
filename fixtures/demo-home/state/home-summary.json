@@ -1,0 +1,157 @@
+{
+  "schema": "fm-secondmate-home-summary.v1",
+  "generated": "2026-10-04T18:55:47Z",
+  "generated_epoch": 1791140147,
+  "valid": true,
+  "decisions_open": [
+    {
+      "id": "lighthouse-privacy-policy-s1",
+      "key": "lighthouse-privacy-policy-s1",
+      "verb": "captain-hold",
+      "summary": "Lighthouse: draft the privacy policy for Google Play and the App Store",
+      "reason": "Privacy policy draft ready for approval in the task report. Decide: 1. approve the text as drafted or ask for edits; 2. where it is hosted.",
+      "hold_bucket": "live",
+      "hold_age_days": 10
+    },
+    {
+      "id": "harbor-staging-key-rotation",
+      "key": "harbor-staging-key-rotation",
+      "verb": "captain-hold",
+      "summary": "Harbor API: rotate the staging API key so the load test can run",
+      "reason": "Only the owner can issue a new staging key. The load test is ready and waits on it.",
+      "hold_bucket": "live",
+      "hold_age_days": 8
+    },
+    {
+      "id": "atlas-await-hosting-quote",
+      "key": "atlas-await-hosting-quote",
+      "verb": "captain-hold",
+      "summary": "Atlas Docs: wait for the hosting quote before picking a plan",
+      "reason": "Waiting on the hosting provider's quote; asked on 2026-10-01.",
+      "hold_bucket": "live",
+      "hold_age_days": 3
+    },
+    {
+      "id": "tidepool-storage-tier-decision",
+      "key": "tidepool-storage-tier-decision",
+      "verb": "captain-hold",
+      "summary": "Tidepool: decide which storage tier backs photo uploads",
+      "reason": "Report in the task folder. Choose A (recommended) standard tier with lifecycle rules, or B infrequent-access tier.",
+      "hold_bucket": "live",
+      "hold_age_days": 0
+    }
+  ],
+  "contributions": {
+    "captain": [
+      {
+        "task": "harbor-backport-14-f2",
+        "url": "https://github.com/example-org/harbor-api/pull/3",
+        "kind": "pr",
+        "reason": "checks green; merge approval needed",
+        "hold": null,
+        "checked_at": "2026-10-04T18:50:47Z"
+      }
+    ]
+  },
+  "landed": [
+    {
+      "id": "atlas-search-backend-s1",
+      "title": "Atlas Docs: what it takes to replace the search backend with a hosted index",
+      "kind": "scout",
+      "pr_url": null,
+      "report_path": "data/atlas-search-backend-s1/report.md",
+      "completion": {
+        "date": "2026-10-05",
+        "verb": "reported"
+      }
+    },
+    {
+      "id": "lighthouse-widget-s1",
+      "title": "Lighthouse: home-screen widget options and what each costs in battery",
+      "kind": "scout",
+      "pr_url": null,
+      "report_path": "data/lighthouse-widget-s1/report.md",
+      "completion": {
+        "date": "2026-10-05",
+        "verb": "reported"
+      }
+    },
+    {
+      "id": "tidepool-albums-s1",
+      "title": "Tidepool: evaluate shared albums for families, and what the first version needs",
+      "kind": "scout",
+      "pr_url": null,
+      "report_path": "data/tidepool-albums-s1/report.md",
+      "completion": {
+        "date": "2026-10-05",
+        "verb": "reported"
+      }
+    },
+    {
+      "id": "lighthouse-drop-legacy-cache",
+      "title": "Lighthouse: remove the legacy forecast cache; never show stale data",
+      "kind": "ship",
+      "pr_url": "https://github.com/example-org/lighthouse/pull/486",
+      "report_path": null,
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "merged"
+      }
+    },
+    {
+      "id": "tidepool-upload-sweep-s1",
+      "title": "Tidepool: sweep every place an upload can be dropped without telling anyone",
+      "kind": "scout",
+      "pr_url": null,
+      "report_path": "data/tidepool-upload-sweep-s1/report.md",
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "reported"
+      }
+    },
+    {
+      "id": "atlas-search-page-build",
+      "title": "Atlas Docs: the redesigned search page, built behind a flag",
+      "kind": "ship",
+      "pr_url": "https://github.com/example-org/atlas-docs/pull/487",
+      "report_path": null,
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "merged"
+      }
+    },
+    {
+      "id": "harbor-cache-fix-f1",
+      "title": "Harbor API: the response cache keys ignore the locale, so users see another language",
+      "kind": "ship",
+      "pr_url": "https://github.com/example-org/harbor-api/pull/2",
+      "report_path": null,
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "merged"
+      }
+    },
+    {
+      "id": "tidepool-audit-s1",
+      "title": "Tidepool: end-to-end audit of the upload path, and the v2 plan",
+      "kind": "scout",
+      "pr_url": null,
+      "report_path": "data/tidepool-audit-s1/report.md",
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "reported"
+      }
+    },
+    {
+      "id": "tidepool-v1-b1",
+      "title": "Tidepool: build v1 (upload, albums, share links) from the prototype",
+      "kind": "ship",
+      "pr_url": "https://github.com/example-org/tidepool/pull/1",
+      "report_path": null,
+      "completion": {
+        "date": "2026-10-04",
+        "verb": "merged"
+      }
+    }
+  ]
+}

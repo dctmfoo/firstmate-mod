@@ -1,0 +1,13 @@
+{
+  "started": "2026-10-04T18:57:00Z",
+  "ended": "2026-10-04T18:57:01Z",
+  "source_home": "a made-up demo home (fixtures/demo-home)",
+  "commands": [
+    "cat state/home-summary.json",
+    "cat state/<id>.meta",
+    "cat state/<id>.status",
+    "grep task lines of data/backlog.md",
+    "herdr agent list",
+    "quota-axi --provider claude,codex --json --no-credential-refresh"
+  ]
+}

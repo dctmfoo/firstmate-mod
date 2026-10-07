@@ -1,0 +1,40 @@
+name: Bug report
+description: Something in the band or pane is wrong, or the mod failed to load
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not paste data from your real Firstmate home (project names, task ids, links, paths). Describe the shape instead, or reproduce it with the demo home.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Steps, ideally against `bun scripts/demo-home.ts /tmp/fm-demo`.
+  - type: input
+    id: claude
+    attributes:
+      label: Claude Code version
+      placeholder: claude --version
+    validations:
+      required: true
+  - type: input
+    id: herdr
+    attributes:
+      label: Herdr version
+      placeholder: herdr --version
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Terminal
+        - Terminal (fullscreen)
+        - Desktop app

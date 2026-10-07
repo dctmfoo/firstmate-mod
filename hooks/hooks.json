@@ -1,0 +1,4 @@
+{
+  "description": "Quiet rail: the Firstmate band above the prompt (what needs you, what each worker is doing), the /fm-fleet pane, read-only refresh timers, and typed-transition toasts",
+  "modules": ["./register.tsx"]
+}

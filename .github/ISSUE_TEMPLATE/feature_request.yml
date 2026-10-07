@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest something the band or pane should show
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to know at a glance?
+      description: The question the band or pane should answer, and why it matters to you.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed change
+      description: Remember the mod is read-only and the band is two rows.

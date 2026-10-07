@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # None of these steps log in to Claude.
+  TYPESCRIPT_VERSION: 5.9.3
+  DISABLE_AUTOUPDATER: "1"
+  DISABLE_TELEMETRY: "1"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: No local paths in the tree
+        run: scripts/check-public.sh
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code@latest
+
+      - name: Validate plugin
+        run: claude plugin validate --strict .
+
+      - name: Unit tests
+        run: claude plugin test .
+
+      # .claude-plugin/types is gitignored; the engine lays it when it loads the
+      # mod. Loading needs no login: the prompt is refused after the mod loads.
+      - name: Load the mod to lay its type declarations
+        run: |
+          claude --plugin-dir . -p "hi" || true
+          test -f .claude-plugin/types/claude-code/index.d.ts
+
+      - name: Type-check
+        run: bunx --package "typescript@${TYPESCRIPT_VERSION}" tsc -p tsconfig.json
+
+      - name: Render the demo home outside Claude Code
+        run: |
+          bun scripts/demo-home.ts "$RUNNER_TEMP/fm-demo"
+          bun scripts/render-replay.ts "$RUNNER_TEMP/fm-demo" --plain | tee "$RUNNER_TEMP/render.txt"
+          grep -q 'NEEDS YOU (5)' "$RUNNER_TEMP/render.txt"

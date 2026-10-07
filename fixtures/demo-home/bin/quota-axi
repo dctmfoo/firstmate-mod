@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Replay stand-in: prints the quota-axi --json output stored with this home.
+here=$(cd "$(dirname "$0")/.." && pwd)
+cat "$here/quota.json"

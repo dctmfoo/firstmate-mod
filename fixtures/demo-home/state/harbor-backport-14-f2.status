@@ -1,0 +1,10 @@
+done [at=1791138030]: branch fm/harbor-backport-14-f2 backports the cache fix onto the 1.4 line and is versioned 1.4.1 with a changelog entry. Tests and build pass. Ready for review.
+paused [at=1791138130]: review pipeline running in the background; resumes on its next gate or outcome
+needs-decision [at=1791138620] [key=review-test]: one review finding needs a decision; details in the task's data folder
+resolved [key=review-test] [at=1791138687]: answered: approve the finding as is
+paused [at=1791139181]: review pipeline past the test step, in the document step
+needs-decision [at=1791139225] [key=review-document]: one documentation finding needs a decision
+resolved [key=review-document] [at=1791139278]: answered: fix the help text only
+paused [at=1791139286]: documentation fix round running
+done [at=1791139707]: PR https://github.com/example-org/harbor-api/pull/3 checks green
+done [at=1791140175]: tag v1.4.1 pushed on the merge commit

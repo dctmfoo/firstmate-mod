@@ -1,0 +1,65 @@
+{
+  "name": "firstmate-mod",
+  "version": "0.3.0",
+  "description": "Quiet rail: a read-only Firstmate band above the prompt that says what needs you and what each worker is doing (live from Herdr), and a /fm-fleet pane, for one configured Firstmate home.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "dctmfoo"
+  },
+  "repository": "https://github.com/dctmfoo/firstmate-mod",
+  "homepage": "https://github.com/dctmfoo/firstmate-mod#readme",
+  "license": "MIT",
+  "keywords": ["firstmate", "herdr", "fleet", "status", "mod"],
+  "userConfig": {
+    "home": {
+      "type": "directory",
+      "title": "Firstmate home",
+      "description": "Absolute path of the one Firstmate home this mod reads (its state/ and data/ folders). Read-only; the mod never writes there.",
+      "default": ""
+    },
+    "herdr_command": {
+      "type": "string",
+      "title": "Herdr command",
+      "description": "Executable run as `<command> agent list` to read every worker's live state.",
+      "default": "herdr"
+    },
+    "quota_command": {
+      "type": "string",
+      "title": "Quota command",
+      "description": "Executable run as `<command> --provider claude,codex --json --no-credential-refresh` for the low-headroom line.",
+      "default": "quota-axi"
+    },
+    "herdr_seconds": {
+      "type": "number",
+      "title": "Worker read interval (seconds)",
+      "description": "How often Herdr is read and joined with each worker's newest status line.",
+      "default": 5,
+      "min": 2,
+      "max": 60
+    },
+    "summary_seconds": {
+      "type": "number",
+      "title": "Summary read interval (seconds)",
+      "description": "How often the published home summary (calls, merges, landings) is re-read from disk.",
+      "default": 30,
+      "min": 5,
+      "max": 600
+    },
+    "headroom_seconds": {
+      "type": "number",
+      "title": "Headroom read interval (seconds)",
+      "description": "How often quota is re-read, for the low-headroom line and toast only.",
+      "default": 900,
+      "min": 60,
+      "max": 3600
+    },
+    "headroom_toast_percent": {
+      "type": "number",
+      "title": "Headroom toast threshold (%)",
+      "description": "Toast once when a provider's tightest fresh limit falls to this percentage or below. 0 turns the toast off.",
+      "default": 10,
+      "min": 0,
+      "max": 100
+    }
+  }
+}
